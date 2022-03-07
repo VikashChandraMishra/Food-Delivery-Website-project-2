@@ -1,0 +1,261 @@
+/* CSS Reset ---> Assigning basic properties to all elements */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bree Serif', serif;
+    width: 100vw;
+}
+
+:root {
+    --navbar-height: 60px;
+}
+
+/* Header */
+
+
+
+/* Navigation Bar */
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 80px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.2; 
+}
+
+#navbar {
+    display: flex;
+    height: 75px;
+    
+    /* No idea why I had to make this relative */
+    position: sticky;
+    top: 0px;
+}
+
+/* Navigation Bar : Logo & Image*/
+
+#logo {
+    margin: 5px 10px;
+}
+
+#logo img {
+    width: 70px;
+    height: 70px;
+    margin: 5px 10px;
+}
+
+/* Navigation Bar : List-Styling*/
+
+#navbar ul {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.item a {
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: wheat;
+    border: 2px gray solid;
+    border-radius: 10px;
+}
+
+.item a:hover {
+    color: black;
+    background-color: wheat;
+}
+
+/* Home Section */
+
+#home::before {
+    content: "";
+    background: url("/bgimg/apple-bg.jpg") no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    /* top: 80px; */
+    height: 400px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#home {
+    color: honeydew;
+    margin: 10px;
+    height: 350px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#home p {
+    margin: 2px;
+}
+
+/* Services Section */
+
+.services-container {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.services-container h1{
+    margin: 5px;
+}
+
+#services {
+    display: flex;
+    justify-content: space-around;
+}
+
+#services .box {
+    margin-bottom: 30px;
+    width: 30%;
+    height: 300px;
+    border: 3px solid blueviolet;
+    border-radius: 40px;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+}
+
+#services .box img {
+    height: 100px; 
+    width: 100px;
+}
+
+/* Clients Section */
+
+#client-section::before{
+    content: "";
+    background: url('/bgimg/watermelon.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#client-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#client-section #clients{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients .client-item img {
+    height: 100px;
+    width: 100px;
+}
+
+/* Contact Section */
+
+#contact::before{
+    content: "";
+    background: url('/bgimg/phone.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 350px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#contact{
+    position: relative;
+}
+
+#contact h1 {
+    padding-top: 20px;
+    margin-bottom: 0px;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 23px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+
+.form-group input,.form-group textarea{
+    width: 400px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+/* Footer */
+
+footer{
+    padding: 8px;
+    color: wheat;
+    background-color: black;
+}
+
+/* Utility Classes : Reusable Classes */
+
+.h-primary {
+    font-size: 2.3rem;
+}
+
+.h-secondary {
+    font-size: 1.3rem;
+}
+
+.btn {
+    cursor: pointer;
+    color: crimson;
+    font-size: .8rem;
+    font-weight: bold;
+    background-color: lightgray;
+    padding: 5px 5px;
+    border-radius: solid 3px white;
+    border-radius: 8px;
+    margin: 25px;
+}
+
+.center{
+    text-align: center;   
+}
